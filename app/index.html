@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="./common-dom.js"></script>
+        <script src="./state-handler.js"></script>
+        <script src="./index.js"></script>
+        <link href="layout.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="icon-materialicons.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="body-wrapper">
+            <audio id="player" reload="auto" autobuffer="true"></audio>
+            <div class="hbox page-header">
+                <span class="page-title" flex="1">Media Catching</span>
+                <button id="btnSetting" class="btn-icon"><icon class="settings"></icon></button>
+            </div>
+            <div class="vbox page-body" flex="1">
+                <div class="hbox">
+                    <span flex="1">Pending List</span>
+                    <a id="clearPendingList" href="javascript:void(0)">Clear List</a>
+                </div>
+                <div class="vbox container" id="pendingTable" flex="1"></div>
+            </div>
+            <div class="vbox page-footer">
+                <div id="playlistTable" class="vbox container"></div>
+                <div id="trackBar" class="track-bar">
+                    <div id="progressBar" style="width: 50%" time="00:00"></div>
+                </div>
+                <div class="hbox player-control">
+                    <button id="btnPlay" class="btn-icon">
+                        <icon class="play"></icon>
+                        <icon class="pause"></icon>
+                    </button>
+                    <button id="btnNext" class="btn-icon"><icon class="skip-next"></icon></button>
+                    <button id="btnLoop" class="btn-icon"><icon class="repeat"></icon></button>
+                    <div class="vbox" flex="1">
+                        <span id="songName" class=""></span>
+                        <span id="timeLabel">00:00/00:00</span>
+                    </div>
+                    <button id="btnTogglePlaylist">
+                        <icon class="playlist-play"></icon>Playlist(<span id="playCount">0</span>)
+                    </button>
+                </div>
+            </div>
+            <div id="settingPanel" class="vbox">
+                <div class="panel-header hbox">
+                    <icon class="settings"></icon>
+                    <span class="label" flex="1">Setting</span>
+                    <button id="btnCloseSettingPanel" class="btn-icon"><icon class="close"></icon></button>
+                </div>
+                <div class="panel-body" class="vbox">
+                    <h1>Setting Container</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

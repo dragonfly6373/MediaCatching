@@ -1,0 +1,48 @@
+
+*[flex="1"] {
+  flex: 1 auto;
+}
+.danger {color: #F46;}
+.warning {color: #F88;}
+.info {color: #8F4;}
+.vbox { display: flex; flex-direction: column }
+.hbox { display: flex; flex-direction: row }
+input[type=checkbox][mode=toggle] {
+  display: none;
+}
+input[type=checkbox][mode=toggle] + label.toggle:before {
+  padding: 2px;
+  border: 2px solid #666;
+}
+input[type=checkbox][mode=toggle]:checked + label.toggle:before {
+  content: 'ON';
+  border-left: 1em solid #666;
+  background: #02caef;
+}
+input[type=checkbox][mode=toggle]:not(:checked) + label.toggle:before {
+  content: 'OFF';
+  border-right: 1em solid #666;
+}
+button > icon + span {
+  margin-left: 0.2em;
+}
+button.btn-icon {
+  border-radius: 50%;
+  outline: none;
+  padding: 0px;
+}
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+@keyframes expand {
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
